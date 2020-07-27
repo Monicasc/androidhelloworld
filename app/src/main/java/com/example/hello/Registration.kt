@@ -2,6 +2,7 @@ package com.example.hello
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.LoginFilter
 
 class Registration : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -9,3 +10,4 @@ class Registration : AppCompatActivity() {
         setContentView(R.layout.activity_registration)
     }
 }
+

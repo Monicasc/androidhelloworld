@@ -6,16 +6,162 @@
     android:layout_height="match_parent"
     tools:context=".Registration">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Registration">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="95dp"
+            android:layout_height="141dp"
+            app:srcCompat="@drawable/ic_baseline_account_circle_24"
+            tools:layout_editor_absoluteX="6dp"
+            tools:layout_editor_absoluteY="86dp" />
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
+            android:ems="10"
+            android:hint="please enter your first name"
+            android:inputType="textPersonName"
+            android:text="firstName"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_editor_absoluteY="41dp" />
+
+        <EditText
+            android:id="@+id/secondName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:ems="10"
+            android:hint="please enter your second name"
+            android:inputType="textPersonName"
+            android:text="secondName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/firstName" />
+
+        <EditText
+            android:id="@+id/emailAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="username@gmail.com"
+            android:inputType="textEmailAddress"
+            app:layout_constraintTop_toBottomOf="@+id/secondName"
+            tools:layout_editor_absoluteX="112dp" />
+
+        <EditText
+            android:id="@+id/phoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:ems="10"
+            android:hint="enter phone number"
+            android:inputType="phone"
+            app:layout_constraintTop_toBottomOf="@+id/emailAddress"
+            tools:layout_editor_absoluteX="120dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:hint="enter password"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@+id/phoneNumber"
+            tools:layout_editor_absoluteX="138dp" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="confirmPassword"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="475dp" />
+
+        <Button
+            android:id="@+id/signUp/register Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="signUp/register"
+            android:text="signUp/register"
+            tools:layout_editor_absoluteX="166dp"
+            tools:layout_editor_absoluteY="563dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="95dp"
+            android:layout_height="141dp"
+            app:srcCompat="@drawable/ic_baseline_account_circle_24"
+            tools:layout_editor_absoluteX="17dp"
+            tools:layout_editor_absoluteY="-20dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="77dp"
+            app:srcCompat="@drawable/ic_baseline_lock_24"
+            tools:layout_editor_absoluteX="40dp"
+            tools:layout_editor_absoluteY="371dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="80dp"
+            android:layout_height="65dp"
+            app:srcCompat="@drawable/ic_baseline_local_phone_24"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="279dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="80dp"
+            android:layout_height="77dp"
+            app:srcCompat="@drawable/ic_baseline_lock_24"
+            tools:layout_editor_absoluteX="36dp"
+            tools:layout_editor_absoluteY="469dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="80dp"
+        android:layout_height="77dp"
+        app:srcCompat="@drawable/ic_baseline_lock_24"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="202dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="95dp"
+        android:layout_height="141dp"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="86dp" />
+
     <EditText
         android:id="@+id/firstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
         android:ems="10"
         android:hint="please enter your first name"
         android:inputType="textPersonName"
         android:text="firstName"
-        tools:layout_editor_absoluteX="112dp"
-        tools:layout_editor_absoluteY="37dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="41dp" />
 
     <EditText
         android:id="@+id/secondName"
@@ -84,4 +230,13 @@
         android:text="signUp/register"
         tools:layout_editor_absoluteX="166dp"
         tools:layout_editor_absoluteY="563dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="95dp"
+        android:layout_height="141dp"
+        app:srcCompat="@drawable/ic_baseline_account_circle_24"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="-20dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
