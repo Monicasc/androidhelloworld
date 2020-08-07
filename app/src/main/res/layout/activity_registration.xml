@@ -17,7 +17,8 @@
             android:layout_height="141dp"
             app:srcCompat="@drawable/ic_baseline_account_circle_24"
             tools:layout_editor_absoluteX="6dp"
-            tools:layout_editor_absoluteY="86dp" />
+            tools:layout_editor_absoluteY="86dp"
+            tools:ignore="DuplicateIds" />
 
         <EditText
             android:id="@+id/firstName"
