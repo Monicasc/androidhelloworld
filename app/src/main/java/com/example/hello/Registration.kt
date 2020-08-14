@@ -15,13 +15,12 @@ class Registrationactivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registrationactivity)
         val onClickListener: Any = tvRegister.setOnClickListener {
-            var FirstName:= etfirstname.text.toString()
+            var FirstName: = etfirstname.text.toString()
             var Password = etPassword.text.toString()
-            var LastName= etlastname.text.toString()
+            var LastName = etlastname.text.toString()
             var PhoneNumber = etphonenumber.text.toString()
             var ConfirmPassword = etPassword.text.toString()
             Toast.makeText(baseContext, Password, Toast.LENGTH_LONG).show()
-
 
         }
     }

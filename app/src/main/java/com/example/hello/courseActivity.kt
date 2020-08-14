@@ -1,34 +1,30 @@
 package com.example.hello
 
-import CoursesRecyclerViewAdapter
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_course.*
 
-data class Courses(val course_id: String, val course_name: Int, val course_code: Int, val course_instructor:String,val course_description:String)
+
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        rvCourses.layoutManager = LinearLayoutManager(baseContext)
-        val coursesAdapter = CoursesRecyclerViewAdapter(coursesList = listOf(
-            Courses(course_id:2,course_name:"javascript",course_code:0978,course_instructor:"Purity",course_description:"web development")
-            Courses(course_id:5,course_name:"python",course_code:0098,course_instructor:"James",course_description:"backend development")
-            Courses(course_id:3,course_name:"grapic design"course_code:8877,course_instructor:"Nyandia",course_description:"UI/UX design")
-            Courses(course_id:6,course_name:"kotlin"course_code:8765,course_instructor:"John",course_description:"mobile development")
-            Courses(course_id:8,cousre_name:"professional development",)Courses(course_id:2,course_name:"javascript",course_code:0978,course_instructor:"Purity",course_description:"web development")
-            Courses(course_id:1,course_name:"navigating your journey",course_code:0000,course_instructor:"Veronica",course_description:"navigating your journey)
-            Courses(course_id:10,course_name:"hardware design"course_code:666,course_instructor:"Barre",course_description:"hardware design")
-            Courses(course_id:20,course_name:"hardware electronics"course_code:7765,course_instructor:"Barre",course_description:"hardware eletronics")
-            Courses(course_id:23,cousre_name:"html/css",course_code:999,course_instructor:"Jeff",course_description:"UI/UI development")
-            Courses(course_id:7,cousre_name:"entreprenuership",course)_code:8875,course_instructor:"Kelly",course_description"entrprenuership")
-
-        )
-        rvCourses.adapter=coursesAdapter
+        setContentView(R.layout.activity_courses)
+        var coursesList= listOf<courses>()
+        course(courseId "1",courseName "kotlin",courseCode "k001", instructor "John",description "mobile app")
+        course(courseId "2", courseName "python",courseCode "p999", instructor "James",description "backend development")
+        course(courseId "3", courseName "entreprenuership", courseCode "e5644",instructor "Kelly", description "intro to entreprenuership")
+        course(courseId "4",courseName "graphic design",courseCode "gh0009", instructor "Nyandia",description "intro to graphid design")
+        course(courseId "5", courseName "html/css",courseCode "hc945", instructor "Jeff",description "intro to html/css")
+        course(courseId "6", courseName "professional development", courseCode "pd5777",instructor "Rodgers", description "intro to professional development")
+        course(courseId "7",courseName "Navigting your journey",courseCode "ng0301", instructor "Veronica",description "navigating your journey")
+        course(courseId "8", courseName "javascript",courseCode "js456", instructor "Purity",description "frontend development")
+        course(courseId "9", courseName "hardware design", courseCode "hd788",instructor "Barre", description "intro to hardware design")
+        course(courseId "10", courseName "hardware electronics", courseCode "he788",instructor "Barre", description "intro to hardware elctronics")
+        rvCourses.LayoutManager =LinearLayoutManager(baseContext)
+        rvCourses.adapter=coursesAdapter(coursesList)
+        }
     }
 
 }
