@@ -1,6 +1,9 @@
 package com.example.hello
 
 object ApiClient {
+    fun buildService(java: Class<ApiInterface>): Any {
+
+    }
     import okhttp3.OkHttpClient
     import retrofit2.Retrofit
     import retrofit2.converter.gson.GsonConverterFactory

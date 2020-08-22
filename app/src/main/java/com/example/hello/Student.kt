@@ -4,7 +4,7 @@ package com.example.hello
 import com.google.gson.annotations.SerializedName
 
 class Student : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
+    fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student)
 

@@ -1,6 +1,8 @@
 package com.example.hello
 
 import android.os.Bundle
+import android.preference.PreferenceManager.getDefaultSharedPreferences
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_course.*
@@ -28,3 +30,35 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+        fun fetchCourses(){
+            val sharedPreferences = getDefaultSharedPreferences(baseContext)
+            val acessToken = sharedPreferences.getString(key:"ACCESS_TOKEN_KET","defValue")
+            val apiClient = ApiClient.buildService(ApiInterface::class.java)
+            val coursesCall = apiClient.let("Bearer " + accessToken)
+            coursesCall.enqueue(object : Callback<CoursesResponse> {
+                override fun onFailure(call: Call<CoursesResponse>, t: Throwable) {
+                    val baseContext
+                    Toast.makeText(baseContext, t.message, Toast.LENGTH_LONG).show()
+        }
+
+                 override fun onResponse(
+                     call: Call<CoursesResponse>
+                     response: Response<CoursesResponse>
+                 ) {
+                     if(response.isSuccessful){
+                         var coursesList = response.body?.courses as List<Course>
+                         var coursesAdapter = CoursesAdapter(courseList)
+                         val rvCourses
+                         rvCourses.layoutManager = LinearLayoutManager(baseContext)
+                         rvCourses.adapter = coursesAdapter
+                     } else {
+                         Toast.makeText(baseContext, response.errorBody().toString(), Toast.LENGTH_LONG)
+                             .show()
+                     }
+                 }
+            })
+        }
+}
+                     }
+                 }
+                 }
