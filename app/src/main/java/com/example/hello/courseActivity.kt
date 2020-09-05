@@ -59,6 +59,18 @@ class MainActivity : AppCompatActivity() {
             })
         }
 }
-                     }
-                 }
-                 }
+ fun fetchCoursesFromDatabase()
+   Thread{
+    val courses = database.courseDoo().getAllCourses()
+     runOnUi Threads{
+         displayCourses(courses)
+     }
+}.start()
+
+}
+  fun displayCourses(courses:list<(Courses))>{
+    var coursesAdapter = CoursesAdapter(courses)
+    rvCourseslayoutManager = LinearLayoutManager(courses)
+    rvCourses.adpater = coursesAdpter
+}
+   }
